@@ -70,7 +70,6 @@ const greeting = (word) => {
   // Solution code here...\
   return word.toUpperCase() + '!';
 };
-
 const speaker = (words, callback) => {
   // Solution code here...
   let newSpeaker = [];
@@ -130,6 +129,15 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let finalArray = [];
+
+  availableItems.forEach(i => {
+    if (i.available === true){
+
+      finalArray.push(i.name);
+    }
+  })
+  return finalArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
