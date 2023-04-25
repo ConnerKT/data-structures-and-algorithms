@@ -90,7 +90,8 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-  return arr.sort()
+  return arr.sort();
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,6 +109,10 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  arr.sort((a, b) =>{
+    return a.price-b.price;
+  });
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
