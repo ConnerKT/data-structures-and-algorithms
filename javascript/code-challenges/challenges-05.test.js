@@ -63,6 +63,14 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  let arrLength = arr.reduce ((acc, curr) => {
+    if (curr >= 0){
+      return acc + 1
+    }else{
+      acc + 0
+    }
+  }, 0);
+  return arrLength;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,6 +131,10 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  let newArr = arr.reduce((acc, curr) =>{
+    acc +curr.name
+  }, [])
+  return newArr.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
