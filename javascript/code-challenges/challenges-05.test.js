@@ -131,10 +131,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  let newArr = arr.reduce((acc, curr) =>{
-    acc +curr.name
-  }, [])
-  return newArr.length;
+  let newArr = [];
+  arr.reduce((acc, curr) =>{
+    acc = curr.name
+    newArr.push(acc)
+  }, "")
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
