@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "SgB4qdPQFr6kAwkUyFyvV6vjydokuN1iKVncYa9HGRkHf+9T5jnVUP5IZixTIiNRQ6mQqBJpYWCeCwJJz6lM6Q==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\conne\\Documents\\Coding Central\\data-structures-and-algorithms\\c-sharp\\DataStructures\\CodeChallenges\\CodeChallenges.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\conne\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\conne\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\conne\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\conne\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
