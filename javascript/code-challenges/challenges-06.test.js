@@ -49,7 +49,8 @@ const appendTheEnd = (str) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function. That is, the function should modify the array 'in place'.
+Write a function that accepts an array and copies the first element to the end of the array. The change should be reflected in the source array that was passed in to the function.
+That is, the function should modify the array 'in place'.
 
 Do not use a return statement.
 
@@ -61,6 +62,8 @@ console.log(a) prints [1, 2, 3, 1]
 
 const appendFirstToLast = (arr) => {
   // Solution code here...
+ let newArr = arr[0]
+ arr.push(newArr)
 };
 
 /* ------------------------------------------------------------------------------------------------
