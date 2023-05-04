@@ -60,7 +60,6 @@ let newArr=charArray.sort((a, b) => {
 
   return a.children.length > b.children.length ? 1 : -1
 })
-console.log(newArr)
 return newArr
 };
 
@@ -75,12 +74,20 @@ the string contains the letter 'w' in lower case or false if it does not.
 
 const containsW = (str) => {
   // Solution code here...
+  let regex = /w/g;
+  if (str.match(regex)){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named isNum that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains a number, and false if the input does not contain a number.
+Write a function named isNum that takes in a string or number of any length.
+This function should use a regular expression pattern to return true if the
+input contains a number, and false if the input does not contain a number.
 
 For example:
 12345 returns true
@@ -91,29 +98,39 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  let regex = /[0-9]/g;
+ return regex.test(input)
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
+Write a function named containsWorld that takes in a string or number of any
+length. This function should use a regular expression pattern to return true
+if the input contains the word 'world' all in lower-case letters, and false
+if the input does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
   // Solution code here...
+let regex = /world/g;
+return regex.test(input)
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
-Write a function named isCapitalized that takes in a string. This function should use a regular expression pattern to match all words that begin with a capital letter. It should only match words, not punctuation.
+Write a function named isCapitalized that takes in a string. This function
+should use a regular expression pattern to match all words that begin with
+a capital letter. It should only match words, not punctuation.
 
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
