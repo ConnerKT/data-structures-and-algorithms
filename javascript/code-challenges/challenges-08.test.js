@@ -4,7 +4,9 @@
 
 CHALLENGE 1 - Review
 
-Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
+Write a function named sortByChildren that sorts the characters below
+by the number of children in each house (fewest to most).
+If a house has the same number of children, sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
 let characters = [
@@ -54,12 +56,20 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
+let newArr=charArray.sort((a, b) => {
+
+  return a.children.length > b.children.length ? 1 : -1
+})
+console.log(newArr)
+return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string.
+This function should use a regular expression pattern to return true if
+the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
