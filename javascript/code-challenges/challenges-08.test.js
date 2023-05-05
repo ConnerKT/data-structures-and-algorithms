@@ -144,8 +144,11 @@ that begin with the letters A through J, inclusive.
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
-
-};
+let regex = /^[A-J]/g
+return arr.filter(each => {
+  return each.match(regex)
+})
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
