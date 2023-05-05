@@ -49,8 +49,8 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  let test = Object.values(obj)
-  if (test == value){
+  if(Object.values(obj).includes(value)){
+
     return true
   }else {
     return false
@@ -158,6 +158,20 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+ for (let i = 0; i < arr.length; i++){
+  let checker = checkValues(arr[i], character);
+  if (checker === true){
+    if (Object.values(arr[i]).includes(arr[i].children)){
+
+      return true;
+
+    }else {
+
+      return false;
+
+    }
+  }
+ }
 
 };
 
