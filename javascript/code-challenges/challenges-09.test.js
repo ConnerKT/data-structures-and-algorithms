@@ -138,6 +138,9 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  arr.forEach(element => {
+    houses.push(element.house)
+  })
   return houses;
 };
 
