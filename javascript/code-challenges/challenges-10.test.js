@@ -102,13 +102,22 @@ const capHill = [5, 85, 58, 51, 50, 13, 33, 32, 47, 94, 31, 62];
 const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
-
+//Why was this one so hard
 const grandTotal = (stores) => {
   // Solution code here...
-  let newArr = [];
-for(let x=0; x < stores.length; x++){
-  
-}
+  let totals = [];
+
+  for (let i = 0; i < stores[0].length; i++) {
+    let totalforday = 0;
+    for (let x = 0; x < stores.length; x++) {
+      if (i < stores[x].length) {
+        totalforday += stores[x][i];
+      }
+    }
+    totals.push(totalforday);
+  }
+
+  return totals;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,6 +135,16 @@ the formatted data.
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let newArr = [];
+  hours.forEach((value, index) => {
+
+    let obj = {
+      sales: `${data[index]} cookies`,
+      time: value
+    };
+    newArr.push(obj)
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -153,6 +172,17 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let position = arr[2].items
+  let totalTreats = 0
+  for(let x = 0; x < position.length; x++){
+    if (position[x].name === 'Treats'){
+      totalTreats += position[x].quantity
+    }
+  }
+  // console.log(position[x])
+  // console.log(position[x].quantity)
+  return totalTreats;
+  // console.log(arr[2].items)
 };
 
 /* ------------------------------------------------------------------------------------------------
