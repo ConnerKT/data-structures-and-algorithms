@@ -86,10 +86,10 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-  console.log(input, "input")
+  // console.log(input, "input")
   for (let x = 0; x < input.length; x++){
     let newArray = input[x].filter(value => {
-      if (isNaN(value) || value % 5 !== 0){
+      if (typeof value !== "number" || isNaN(value) || value % 5 !== 0){
         return false
       }else {
         return true
@@ -103,7 +103,7 @@ const divisibleByFiveTwoToThePower = (input) => {
     })
     input[i] = newnewArr
   }
-  console.log(input, "output")
+  // console.log(input, "output")
   return input
 };
 
@@ -171,7 +171,11 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+let chardata = data.filter(element => element.gender === 'male' || element.gender === 'female')
+// console.log(chardata)
+let results = chardata.map(element => element.name).join(' and ')
 
+return results
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -184,6 +188,17 @@ Write a function named findShortest that, given the Star Wars data from
 
 let findShortest = (data) => {
   // Solution code here...
+  let results = data.reduce((firstvalue, secondvalue) => {
+    //console.log(firstvalue)
+    if (parseInt(firstvalue.height) < parseInt(secondvalue.height)) {
+      //console.log(firstvalue.height)
+        return firstvalue;
+    } else {
+
+        return secondvalue;
+    }
+  });
+  return results.name
 };
 
 /* ------------------------------------------------------------------------------------------------
