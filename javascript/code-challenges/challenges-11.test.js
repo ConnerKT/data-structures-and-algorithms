@@ -20,12 +20,21 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+  let newArr = Object.keys(obj);
+  let ansArr = []
+  newArr.forEach((value) =>{
+    ansArr.push(`<li>${value}: ${obj[value]}</li>`)
+  })
+  return ansArr
+
 }
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named count that, given an integer and an array of arrays, uses either filter, map, or reduce to count the amount of times the integer is present in the array of arrays.
+Write a function named count that, given an integer and an array of arrays,
+uses either filter, map, or reduce to count the amount of times the integer
+is present in the array of arrays.
 
 Note: You might need to use the same method more than once.
 
@@ -34,7 +43,10 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-};
+    const count = input.reduce((accumulator, array) => {return accumulator + array.filter(value => value === target).length;}, 0);
+    //console.log(accumlator)
+    return count;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -48,22 +60,51 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+    let total = 0
+  for (let x = 0; x< input.length; x++){
+    for(let i = 0; i < input[x].length; i++){
+      total += input[x][i]
+    }
+  }
+  return total
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-Write a function named divisibleByFiveTwoToThePower that accepts an array of arrays as input.
+Write a function named divisibleByFiveTwoToThePower that accepts an array
+of arrays as input.
 
-This function should first remove any elements that are not numbers or are not divisible by five.
+This function should first remove any elements that are not numbers or are
+not divisible by five.
 
-This function should then raise 2 to the power of the resulting numbers, returning an array of arrays.
+This function should then raise 2 to the power of the resulting numbers,
+returning an array of arrays.
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
+  console.log(input, "input")
+  for (let x = 0; x < input.length; x++){
+    let newArray = input[x].filter(value => {
+      if (isNaN(value) || value % 5 !== 0){
+        return false
+      }else {
+        return true
+      }
+    })
+    input[x] = newArray
+  }
+  for (let i =0; i < input.length;i++) {
+    let newnewArr = input[i].map(element => {
+      return 2 ** element
+    })
+    input[i] = newnewArr
+  }
+  console.log(input, "output")
+  return input
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,12 +171,15 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
-Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the character who is the shortest in height.
+Write a function named findShortest that, given the Star Wars data from
+ Challenge 6, uses any combination of filter, map and reduce to return the
+ name of the character who is the shortest in height.
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
